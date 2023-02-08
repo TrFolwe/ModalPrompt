@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Modal</title>
+    <link rel="stylesheet" href="prompt.css">
+</head>
+
+<body>
+    <!--<div type="question-prompt" class="prompt-modal">
+        <header class="prompt-header">
+            <h4>Ana Sayfaya yönlendiriliyorsunuz, Kabul ediyor musunuz?</h4>
+            <hr style="margin: 4px">
+        </header>
+        <div class="modal-elements">
+            <button modal-btn-type="ok" class="ok-btn">OK</button>
+            <button modal-btn-type="cancel" class="cancel-btn">CANCEL</button>
+        </div>
+    </div>-->
+
+    <!--<div type="input-question" class="prompt-modal">
+        <header class="prompt-header">
+            <h4>Gereken bilgileri giriniz</h4>
+            <hr style="margin: 4px">
+        </header>
+        <div class="modal-elements">
+            <input name="isim" type="text" placeholder="İsminiz">
+            <input name="soyisim" type="text" placeholder="Soy İsminiz">
+            <button style="width: 100%;">GÖNDER</button>
+        </div>
+    </div>-->
+    <script src="../prompt-modal.js"></script>
+    <script>
+        showPrompt("prompt1", document.querySelector("body"), "question", "Question 1?", null, (data) => {
+            console.log(data);
+        });
+
+        showPrompt("prompt2", document.querySelector("body"), "input", "Question 2?", [{
+            name: "username",
+            type: "text",
+            placeholder: "Enter username"
+        }, {
+            name: "password",
+            type: "password",
+            placeholder: "Enter password"
+        }], (data) => {
+            console.log(data);
+        });
+    </script>
+</body>
+
+</html>

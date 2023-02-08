@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.prompt-modal {
+    position: relative;
+    width: 50%;
+    height: auto;
+    background-color: #222;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+    color: white;
+}
+
+.prompt-modal .modal-elements {
+    /*position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);*/
+    display: flex;
+    position: relative;
+    width: 100%;
+    place-items: center;
+    gap: 15px;
+    box-sizing: border-box;
+    padding: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt-modal .modal-elements button {
+    cursor: pointer;
+}
+
+.prompt-modal .modal-elements button,
+input {
+    border-color: white;
+    padding: 10px 20px;
+    color: white;
+    background-color: #2a2a2a;
+    border-radius: 25px;
+    transition: all 500ms;
+    width: 35%;
+}
+
+.prompt-modal[type="input-question"] header.prompt-header .add-input {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    cursor: pointer;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.prompt-modal[type="input-question"] header.prompt-header .add-input img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.prompt-modal header.prompt-header {
+    padding: 5px;
+    position: relative;
+}
+
+.prompt-modal .modal-elements input::placeholder {
+    color: #aaa;
+}
+
+.prompt-modal .modal-elements input:focus {
+    width: 50%;
+}
+
+.prompt-modal .modal-elements button:hover {
+    filter: brightness(1.5);
+}
+
+.prompt-modal * {
+    font-family: cursive;
+}
